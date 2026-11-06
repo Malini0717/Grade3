@@ -1,0 +1,115 @@
+@import "tailwindcss";
+@source "../**/*.{js,ts,jsx,tsx}";
+
+/* ═══════════════════════════════════════════════════════════════════
+   THAMBA COMPUTING LABS — GRADE 3 DESIGN TOKEN SYSTEM
+   ═══════════════════════════════════════════════════════════════════ */
+
+@theme {
+  --color-lab-blue:        #0284c7;
+  --color-lab-purple:      #7c3aed;
+  --color-lab-emerald:     #059669;
+  --color-lab-amber:       #d97706;
+  --color-lab-red:         #dc2626;
+  --color-lab-cyan:        #0891b2;
+  --color-lab-pink:        #db2777;
+  --color-lab-orange:      #ea580c;
+
+  --color-surface-base:    #fffbeb;
+  --color-surface-card:    #fef3c7;
+  --color-surface-raised:  #fde68a;
+  --color-surface-border:  #f59e0b;
+
+  --font-sans: var(--font-baloo), system-ui, sans-serif;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   GLOBAL BASE & LOCKED 100DVH SHELL
+   ═══════════════════════════════════════════════════════════════════ */
+*, *::before, *::after { 
+  box-sizing: border-box; 
+}
+
+html, body {
+  height: 100%;
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+body {
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Baloo 2", system-ui, sans-serif !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   LAB THEME BACKGROUNDS — SUNLIT & RICH MATERIAL (NO WHITE / NO DARK)
+   ═══════════════════════════════════════════════════════════════════ */
+@layer components {
+  /* DAYLIGHT — sunlit honey maple and goldenrod sky */
+  .theme-daylight {
+    background: linear-gradient(180deg, #fef3c7 0%, #fde68a 50%, #fed7aa 100%);
+  }
+
+  /* CIRCUIT — rich jade and mint silicon workbench */
+  .theme-circuit {
+    background: linear-gradient(145deg, #a7f3d0 0%, #6ee7b7 50%, #34d399 100%);
+  }
+
+  /* COSMOS — vibrant azure and lilac daybreak atmosphere */
+  .theme-cosmos {
+    background: linear-gradient(145deg, #c7d2fe 0%, #a5b4fc 50%, #818cf8 100%);
+  }
+
+  /* OCEAN — deep crystal turquoise and sky water */
+  .theme-ocean {
+    background: linear-gradient(145deg, #bae6fd 0%, #7dd3fc 50%, #38bdf8 100%);
+  }
+
+  /* FORGE — warm terracotta and burnished copper */
+  .theme-forge {
+    background: linear-gradient(145deg, #fed7aa 0%, #fdba74 50%, #fb923c 100%);
+  }
+
+  /* GARDEN — lush sunlit emerald turf and botanical meadow */
+  .theme-garden {
+    background: linear-gradient(145deg, #bbf7d0 0%, #86efac 50%, #4ade80 100%);
+  }
+
+  /* STUDIO — warm peach rose and apricot creative studio */
+  .theme-studio {
+    background: linear-gradient(145deg, #fbcfe8 0%, #f472b6 50%, #e879f9 100%);
+  }
+
+  /* NEON — radiant citrus amber and tangerine */
+  .theme-neon {
+    background: linear-gradient(145deg, #fef08a 0%, #fde047 50%, #facc15 100%);
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   ANIMATIONS & EFFECTS
+   ═══════════════════════════════════════════════════════════════════ */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50%       { transform: translateY(-8px) scale(1.02); }
+}
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 0.8; }
+}
+
+.animate-float {
+  animation: float-slow 4s ease-in-out infinite;
+}
+.animate-pulse-soft {
+  animation: pulse-soft 2.5s ease-in-out infinite;
+}
+
+.font-baloo {
+  font-family: "Baloo 2", cursive, sans-serif;
+}

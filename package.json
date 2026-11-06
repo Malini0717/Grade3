@@ -1,0 +1,38 @@
+{
+  "name": "grade3-labs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@fontsource/baloo-2": "^5.3.0",
+    "@react-three/drei": "^10.7.8",
+    "@react-three/fiber": "^9.6.1",
+    "framer-motion": "^12.35.1",
+    "lucide-react": "^0.577.0",
+    "next": "^15.1.7",
+    "react": "^19.0.0",
+    "react-confetti": "^6.4.0",
+    "react-dom": "^19.0.0",
+    "react-use": "^17.6.0",
+    "three": "^0.185.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/three": "^0.185.1",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^15.1.7",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.0"
+  },
+  "overrides": {
+    "glob": "^10.5.0"
+  }
+}
